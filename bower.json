@@ -14,12 +14,15 @@
   "resolutions": {
     "knockout": "~3.3.0-alpha"
   },
-
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "knockout-validation": "~2.0.3",
+    "jasmine-core": "~2.3.4"
+  }
 }

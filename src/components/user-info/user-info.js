@@ -1,10 +1,19 @@
-define(['knockout', 'text!./user-info.html'], function(ko, templateMarkup) {
+define(['knockout', 'ko-validation', 'text!./user-info.html'], function(ko, koval, templateMarkup) {
 
   function UserInfo(params) {
     //this.message = ko.observable('Hello from the user-info component!');
 
-    this.firstName = ko.observable('');
-    this.lastName = ko.observable('');
+    this.firstName = ko.observable('').extend({
+                     required: true,
+                     minLength: 3,
+                     pattern: {
+                          message: 'Hey this doesnt match my pattern',
+                          params: '^[A-Z0-9].$'
+                     }
+                 });
+    this.lastName = ko.observable().extend({
+        required : { params: true, message:"Field Required"}
+    });
     this. city = ko.observable('');
   }
 

@@ -1,7 +1,7 @@
 define(['components/home-page/home'], function(homePage) {
   var HomePageViewModel = homePage.viewModel;
 
-  describe('Home page view model', function() {
+  describe('Homge pae view model', function() {
 
     it('should supply a friendly message which changes when acted upon', function() {
       var instance = new HomePageViewModel();
